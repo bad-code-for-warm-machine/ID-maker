@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<script language="javascript">
+
+
+function zao()
+{
+var onedone=new Array();
+for(k=0;k<5;k++)
+{
+	var aa=3;
+	var bb=(Math.floor(Math.random()*10)*907)%7+1;
+	var cc=0;
+	var dd=(Math.floor(Math.random()*10)*641)%3+1;
+	var ee=0;
+	var ff=1;
+	var gg=1;
+	var hh=9;
+	var ii=(Math.floor(Math.random()*10)*829)%5+5;
+	var jj=(Math.floor(Math.random()*10)*727)%10;
+	var kk=0;
+	var ll=(Math.floor(Math.random()*10)*503)%9+1;
+	var mm=(Math.floor(Math.random()*10)*487)%3;
+	var nn=(Math.floor(Math.random()*10)*349)%8+1;
+	var oo=(Math.floor(Math.random()*10)*251)%10;
+	var pp=(Math.floor(Math.random()*10)*163)%10;
+	var qq=(Math.floor(Math.random()*10)*97)%10;
+	
+	var rrtemp=(21+bb*9+dd*5+4+2+9+ii*6+jj*3+ll*9+mm*10+nn*5+oo*8+pp*4+qq*2)%11;
+	var rr;
+	if(rrtemp==0)
+		{rr=1;}
+	else if(rrtemp==1)
+		{rr=0;}
+	else if(rrtemp==2)
+		{rr="X";}
+	else if(rrtemp==3)
+		{rr=9;}
+	else if(rrtemp==4)
+		{rr=8;}
+	else if(rrtemp==5)
+		{rr=7;}
+	else if(rrtemp==6)
+		{rr=6;}
+	else if(rrtemp==7)
+		{rr=5;}
+	else if(rrtemp==8)
+		{rr=4;}
+	else if(rrtemp==9)
+		{rr=3;}
+	else
+		{rr=2;}
+	onedone[k]=aa.toString()+bb.toString()+cc.toString()+dd.toString()+ee.toString()+ff.toString()+gg.toString()+hh.toString()+ii.toString()+jj.toString()+kk.toString()+ll.toString()+mm.toString()+nn.toString()+oo.toString()+pp.toString()+qq.toString()+rr;
+}
+document.getElementById("zaoresult").innerHTML=onedone[0]+"<br />"+onedone[1]+"<br />"+onedone[2]+"<br />"+onedone[3]+"<br />"+onedone[4]
+}
+
+
+function suan()
+{
+	var zz=document.getElementById("suaninput").value.toString();
+	var mie=parseInt(zz[0])*7+parseInt(zz[1])*9+parseInt(zz[2])*10+parseInt(zz[3])*5+parseInt(zz[4])*8+parseInt(zz[5])*4+parseInt(zz[6])*2+parseInt(zz[7])+parseInt(zz[8])*6+parseInt(zz[9])*3+parseInt(zz[10])*7+parseInt(zz[11])*9+parseInt(zz[12])*10+parseInt(zz[13])*5+parseInt(zz[14])*8+parseInt(zz[15])*4+parseInt(zz[16])*2;
+	var rrtemp=mie%11;
+	var rr;
+	if(rrtemp==0)
+		{rr=1;}
+	else if(rrtemp==1)
+		{rr=0;}
+	else if(rrtemp==2)
+		{rr="X";}
+	else if(rrtemp==3)
+		{rr=9;}
+	else if(rrtemp==4)
+		{rr=8;}
+	else if(rrtemp==5)
+		{rr=7;}
+	else if(rrtemp==6)
+		{rr=6;}
+	else if(rrtemp==7)
+		{rr=5;}
+	else if(rrtemp==8)
+		{rr=4;}
+	else if(rrtemp==9)
+		{rr=3;}
+	else
+		{rr=2;}
+	document.getElementById("suanresult").innerHTML=rr;
+
+
+
+}
+</script>
+<title>很多功能</title>
+<link href="main.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="bg">
+
+
+<div id="zaola" class="sect">
+<div class="sectName">造身份证号</div>
+<div id="zaofunc" class="func">
+
+<button class="botton"  type="button" onclick="zao()">造</button></span>
+<div id="zaoresult" class="result" >
+</div>
+</div>
+</div>
+
+
+<div id="suanla" class="sect">
+<div class="sectName">算身份证最后一位</div>
+<div id="suanfunc" class="func">
+<span class="tip">输入前面17位：</span>
+<input id="suaninput" class="inputt"  />
+<button class="botton"  type="button" onclick="suan()">算</button></span>
+<div id="suanresult" class="result" >
+</div>
+</div>
+</div>
+
+</div>
+</body>
+</html>
